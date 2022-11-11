@@ -72,6 +72,7 @@ for (int i = 1; i <= maxSzam; i++)
 */
 
 // Számkitaláló
+/*
 Console.WriteLine("Gondoltam egy számra (1-100) találd ki!");
 Random r = new Random();
 int kitalalandoSzam = r.Next(1, 101);
@@ -89,5 +90,25 @@ do
 
 if (tippSzamlalo > 5 || tipp != kitalalandoSzam) Console.WriteLine("Nem sikerült kitalálnni!");
 else Console.WriteLine(tippSzamlalo + ". próbálkozásra sikerült kitalálni!");
+*/
+
+// Zenei equalizer
+Console.CursorVisible = false;
+int maxX = Console.WindowWidth;
+int maxY = Console.WindowHeight;
+
+Random random = new Random();
+
+for(int i=0; i < 50; i++){
+    int x = random.Next(0, maxX);
+    int yMag = random.Next(0, maxY);
+    Console.Beep(100*x+1, 100);
+    for(int y = maxY; y > 25; y--){
+        Console.SetCursorPosition(x, y);
+        Console.Write("*");
+        System.Threading.Thread.Sleep(5);
+    }
+}
+
 
 Console.ReadKey();

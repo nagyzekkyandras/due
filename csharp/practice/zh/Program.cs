@@ -1,0 +1,35 @@
+Console.WriteLine("ZH feladat 1.");
+
+Console.WriteLine("add meg a számot");
+int x = int.Parse(Console.ReadLine());
+
+int e = 1;
+
+for (int i = 1; i <= x; i++)
+{
+    e = (10 + i) * e;
+}
+
+Console.WriteLine("Az eredmény: " + e);
+
+
+Console.WriteLine("ZH feladat 2.");
+
+int[] vektor = { 21, 453, 88, 64, 98, 203 };
+
+int vane = 0;
+
+for (int i = 0; i < vektor.Length; i++)
+{
+    if (vektor[i]%2 == 0)
+    {
+        if (vektor[i] > vektor[i + 1])
+        {
+            vane=vane+1;
+        }
+    }
+}
+
+Console.WriteLine("Van-e olyan elem ami páros és az utána lévő elemnél is nagyobb: " + vane);
+
+Console.ReadKey();

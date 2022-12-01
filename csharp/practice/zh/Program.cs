@@ -32,4 +32,35 @@ for (int i = 0; i < vektor.Length; i++)
 
 Console.WriteLine("Van-e olyan elem ami páros és az utána lévő elemnél is nagyobb: " + vane);
 
+
+Console.WriteLine("ZH feladat 3.");
+
+int[] szamok = new int[10];
+int db = 1;
+
+Console.Write("Adjon meg 10 db számot!");
+
+for (int i = 0; i < szamok.Length; i++)
+{
+    Console.Write("\nKérem adja meg a " + db + "-edik számot: ");
+    szamok[i] = int.Parse(Console.ReadLine());
+    db++;
+}
+for (int i = 0; i < szamok.Length; i++)
+{
+    Console.Write("\nA megadott számok: " + szamok[i] + " ");
+}
+int minimum = szamok[0];
+for (int i = 0; i < szamok.Length; i++)
+{
+    if (szamok[i] >= 0)
+    {
+        if (szamok[i] < minimum)
+        {
+            minimum = szamok[i];
+        }
+    }
+}
+Console.Write("\nA legkisebb szám: " + minimum);
+
 Console.ReadKey();
